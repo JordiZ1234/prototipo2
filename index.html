@@ -6,45 +6,72 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-blue-100">
-    <div class="w-full mx-auto">
-        <header class="flex justify-between items-center p-5 bg-white/20 backdrop-blur-md rounded-xl shadow-lg">
+<body class="bg-blue-100 w-full bg-[url('https://www.doonamis.com/wp-content/uploads/2020/10/Principales-cualidades-de-una-empresa-digital-exitosa-scaled.jpg')] bg-cover       bg-no-repeat">
+    <div class="w-full mx-auto flex flex-col items-center">
+        <header class="flex justify-between items-center p-5 bg-white/20 backdrop-blur-md  shadow-lg w-full m-0">
             <div>
-                <h1 class="text-black">Creació StartUp</h1>
+                <h1 class="text-white text-2xl">Creació StartUp</h1>
             </div>
             <div>
-                <ul class="flex gap-5 list-none text-black">
-                    <li>Inici</li>
-                    <li>Qui Som</li>
-                    <li>Opina</li>
-                    <li>Material</li>
-                    <li>Contacte</li>
+                <ul class="flex gap-5 list-none text-white">
+                    <li class="relative cursor-pointer after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Inici</li>
+                        <!-- como hacer el hover del subrayado animado con Tailwind:
+
+                        relative — hace que el li sea el punto de referencia para posicionar el pseudo-elemento after dentro de él
+
+                        El pseudo-elemento after (es una línea invisible que se añade debajo del texto)
+
+                        after:absolute — saca la línea del flujo normal y la posiciona de forma absoluta
+                        after:bottom-0 — la pega al fondo del li
+                        after:left-0 — la alinea desde la izquierda
+
+                        El tamaño de la línea
+
+                        after:h-[2px] — le da 2px de alto (el grosor de la línea)
+                        after:w-0 — empieza con ancho 0, o sea, invisible
+
+                        El color
+
+                        after:bg-white — la línea es blanca
+
+                        La animación
+
+                        after:transition-all — indica que cualquier cambio de propiedad se animará
+                        after:duration-300 — la animación dura 300ms
+
+                        El trigger del hover
+
+                        hover:after:w-full — cuando pasas el ratón, la línea pasa de w-0 a w-full (100% del ancho del li), y como tiene transition, lo hace de forma animada -->
+                    <li class="relative cursor-pointer after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Qui Som</li>
+                    <li class="relative cursor-pointer after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Opina</li>
+                    <li class="relative cursor-pointer after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Material</li>
+                    <li class="relative cursor-pointer after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full">Contacte</li>
                 </ul>
             </div>
         </header>
-        <main class="flex justify-center items-center">
+        <main class="flex justify-center items-center w-[1000px] h-[80vh]">
             <div class="w-full flex flex-col items-center justify-center">
                 <input type="text" placeholder="Escribe tu Idea" class="p-5 bg-white/20 backdrop-blur-md rounded-xl shadow-lg w-full mt-5 text-white placeholder-gray-500 transition-all duration-300
                 hover:bg-white/40 hover:scale-[1.02]">
                 <div class="flex gap-5 mt-5">
-                    <button class="px-6 py-3 bg-white/20 backdrop-blur-md rounded-xl shadow-lg text-black
+                    <button class="px-6 py-3 bg-white/20 backdrop-blur-md rounded-xl shadow-lg text-black font-semibold
                     transition-all duration-300
                     hover:bg-white/40 hover:scale-110">Comença a Opinar</button>
-                    <button class="px-6 py-3 bg-white/20 backdrop-blur-md rounded-xl shadow-lg text-black
+                    <button class="px-6 py-3 bg-white/20 backdrop-blur-md rounded-xl shadow-lg text-black font-semibold
                     transition-all duration-300
                     hover:bg-white/40 hover:scale-110">Material Reciclable</button>
                 </div>
             </div>
         </main>
-        <footer class="flex bg-black/50 justify-between items-center position-absolute bottom-0 p-5">
+        <footer class="flex bg-black/50 gap-[600px] justify-center items-center absolute bottom-0 p-5 w-full text-white">
             <div class="w-[700px]">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora accusantium, quos quae asperiores quisquam enim voluptatum eius dicta iusto distinctio, molestiae reiciendis delectus assumenda recusandae beatae non repellendus quia pariatur.</p>
             </div>
             <div>
                 <div>
-                    <p>Dades</p>
-                    <p>+34 192190201</p>
-                    <p>prueba@homtial.es</p>
+                    <p class="border-white-100 border-b-2">Dades</p>
+                    <p class="italic">+34 192190201</p>
+                    <p class="italic">prueba@homtial.es</p>
                 </div>
             </div>
         </footer>
